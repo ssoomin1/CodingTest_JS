@@ -12,14 +12,9 @@ function solution(s){
         }
     }
 
-    if(pCount === yCount){
-        answer=true;
-    }else{
-        answer=false;
-    }
     return answer;
 
-    // if(pArr.length === yArr.length){
+    // if(pCount === yCount){
     //     answer=true;
     // }else{
     //     answer=false;
