@@ -1,4 +1,6 @@
 function solution(numbers){
+    //e+'':문자열 
+    //sort 활용하기
     let answer=numbers.map((e)=>e+'').sort((a,b)=>(b+a)-(a+b)).join('');
     return answer[0]===0?'0':answer;
 }
