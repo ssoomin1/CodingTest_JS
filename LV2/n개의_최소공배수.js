@@ -1,17 +1,13 @@
-function gcd(a,b){
-    if(a%b===0){
-        return b;
-    }
-    gcd(b,a%b);
-}
+function gcd(x,y){return x%y===0 ? y : gcd(y,Math.floor(x%y));}
+function lcm(x,y){return Math.floor(x*y/gcd(x,y));}
 
-function solution(arr){
-    //최소공배수는 두 수의 곱/최대공약수
-    const answer=arr.reduce((prev,conn)=>{
-        
-    })
+function solution(arr) {
+    arr=arr.sort((a,b)=>a-b);
+    let answer = arr[0];
+    for(let i=1;i<arr.length;i++){
+        answer=lcm(answer,arr[i]);
+    }
     return answer;
 }
-
 console.log(solution([2,6,8,14]));
 console.log(solution([1,2,3]));
